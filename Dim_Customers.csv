@@ -75,7 +75,7 @@ db7f6e6545a6,04328,Calau,Nordrhein-Westfalen
 c98325181881,70596,Soltau,Bayern
 379ebebe8e18,56909,Sömmerda,Schleswig-Holstein
 dd0fe71671a0,27868,Grimma,Niedersachsen
-05736a0d282c,42258,Cottbus,Hessen
+05736a0d282c,,Cottbus,Hessen
 3e4e37d748aa,78669,Cuxhaven,Rheinland-Pfalz
 0465ce22ecb4,42253,Paderborn,Nordrhein-Westfalen
 921e62ce7ad8,01094,Riesa,Sachsen-Anhalt
@@ -135,7 +135,7 @@ decdd395c69b,55269,Kehl,Hamburg
 309e98408862,64814,Nordhausen,Schleswig-Holstein
 fef1b545c51c,30756,Eisenhüttenstadt,Bayern
 437c0fbd875f,80617,Heinsberg,Rheinland-Pfalz
-6b2a01940a1d,60385,Hoyerswerda,Baden-Württemberg
+6b2a01940a1d,,Hoyerswerda,Baden-Württemberg
 076a230994c4,86571,Oberviechtach,Bremen
 0d9d01d1a344,31329,Düren,Brandenburg
 6c1abafed714,49035,Bremen,Mecklenburg-Vorpommern
@@ -410,7 +410,7 @@ f60a0483a6ab,20185,Dresden,Sachsen
 e70e2b8716ad,51826,Leipziger Land,Thüringen
 72a8fc4b3f4b,10293,Brand,Niedersachsen
 4c8539d04486,97585,Tuttlingen,Brandenburg
-eefb36acc47f,46267,Greiz,Sachsen-Anhalt
+eefb36acc47f,,Greiz,Sachsen-Anhalt
 974d23a2f0a4,14181,Berchtesgaden,Rheinland-Pfalz
 3c39f0cef709,97185,Querfurt,Niedersachsen
 1003cd80e129,08222,Reutlingen,Niedersachsen
@@ -512,7 +512,7 @@ d203bb5d702c,82973,Mettmann,Baden-Württemberg
 de5995b0f460,65268,Waren,Nordrhein-Westfalen
 25afb81b53f9,98120,Sulzbach-Rosenberg,Schleswig-Holstein
 81eab3379b56,52203,Paderborn,Niedersachsen
-a5db8e85ae4a,42138,Augsburg,Bayern
+a5db8e85ae4a,,Augsburg,Bayern
 deed6cfd4550,74124,Jülich,Berlin
 0edb747c7064,80032,Füssen,Hessen
 6cad594cb7a1,20649,Senftenberg,Mecklenburg-Vorpommern
@@ -520,7 +520,7 @@ e6638b0be48a,41314,Mellrichstadt,Rheinland-Pfalz
 6bdb39cf3875,44836,Regen,Rheinland-Pfalz
 fe2dfe5b7805,04763,Pinneberg,Hessen
 20e4c8f9f7e6,58328,Weißenfels,Mecklenburg-Vorpommern
-10026dbd2d64,02440,Senftenberg,Mecklenburg-Vorpommern
+10026dbd2d64,,Senftenberg,Mecklenburg-Vorpommern
 8637e6be643e,00892,Wittenberg,Sachsen
 d33a78d74e4f,61368,Neuruppin,Nordrhein-Westfalen
 8afbf7870b9f,21182,Neustadtner Waldnaab,Mecklenburg-Vorpommern
@@ -625,7 +625,7 @@ dde2a1a9d5df,32426,Ebersberg,Saarland
 f6cc1089a080,43127,Wunsiedel,Bayern
 1cb9049a7608,51512,Schwäbisch Gmünd,Nordrhein-Westfalen
 13d2e75f5e4c,25438,Parchim,Baden-Württemberg
-9dbcd922c347,80290,Hannoversch Münden,Sachsen
+9dbcd922c347,,Hannoversch Münden,Sachsen
 fb5a43004a03,54837,Groß-Gerau,Berlin
 d649221985e2,00591,Roth,Schleswig-Holstein
 d649fbca3585,33016,Schwäbisch Hall,Hessen
@@ -635,7 +635,7 @@ d649fbca3585,33016,Schwäbisch Hall,Hessen
 bba0303a4f1e,72266,Dieburg,Rheinland-Pfalz
 faa2f6f03cc1,24530,Kötzting,Hamburg
 8cf348161471,15794,Gera,Thüringen
-95d6261eb033,25971,Mellrichstadt,Saarland
+95d6261eb033,,Mellrichstadt,Saarland
 81140dea1830,37970,Oranienburg,Brandenburg
 0f0e0d0ddd58,73305,Schweinfurt,Thüringen
 f7482307e4e1,88436,Viechtach,Baden-Württemberg
@@ -659,7 +659,7 @@ d8c6eb9296b5,11471,Kaiserslautern,Sachsen
 3a4982af4066,17653,Bad Brückenau,Rheinland-Pfalz
 b3cd19da7738,18274,Pinneberg,Bayern
 0e29f3ef6c8e,37730,Wolfenbüttel,Hamburg
-7515db680360,29907,Kehl,Sachsen-Anhalt
+7515db680360,,Kehl,Sachsen-Anhalt
 0b2cf2585cf2,45768,Dessau,Brandenburg
 d603cad7b19e,33242,Angermünde,Saarland
 204dcf7a5e26,73126,Dinslaken,Bremen
@@ -677,7 +677,7 @@ d451b4fe0223,43697,Torgau,Mecklenburg-Vorpommern
 07a15cd7310f,64534,Griesbach Rottal,Thüringen
 33c93562f478,41847,Haldensleben,Bremen
 b8710bcabf47,48762,Apolda,Hessen
-0c686f54405d,05248,Nördlingen,Bayern
+0c686f54405d,,Nördlingen,Bayern
 49b1338338e7,16204,Pegnitz,Thüringen
 ab21903e68c6,20319,Hammelburg,Brandenburg
 f247903e701b,63203,Greifswald,Thüringen
@@ -736,10 +736,10 @@ bcece21f6f55,64203,Wurzen,Bremen
 2bd03759e5df,91373,Luckenwalde,Rheinland-Pfalz
 27a4a8527b3f,02300,Hoyerswerda,Sachsen-Anhalt
 246c8c07d731,93659,Delitzsch,Bayern
-3435d4a9da90,92632,Fürstenfeldbruck,Bremen
+3435d4a9da90,,Fürstenfeldbruck,Bremen
 8bf6d58effba,05053,Lemgo,Sachsen-Anhalt
 d0fbc5dd9ca1,56691,Kusel,Bremen
-3a1afaed4133,69177,Zossen,Bremen
+3a1afaed4133,,Zossen,Bremen
 0963f40945fa,60335,Bamberg,Brandenburg
 04eb0af0dfe9,69996,Staßfurt,Nordrhein-Westfalen
 a5598237eef7,99323,Erbisdorf,Mecklenburg-Vorpommern
@@ -810,7 +810,7 @@ bdde9cfbebaf,37605,Grafenau,Bayern
 4ff39efe0c37,60511,Bitterfeld,Sachsen-Anhalt
 edd213b55d91,59067,Badibling,Baden-Württemberg
 5128bef0e4a9,76056,Ebersberg,Baden-Württemberg
-5d0536d12f17,23546,Darmstadt,Hamburg
+5d0536d12f17,,Darmstadt,Hamburg
 cd0279635bf1,21224,Zossen,Schleswig-Holstein
 4cf5896cdd88,15848,Beeskow,Baden-Württemberg
 75a18f420f3b,64261,Wetzlar,Brandenburg
@@ -858,7 +858,7 @@ c686141e554c,86928,Einbeck,Niedersachsen
 c57e8356015d,21029,Lübeck,Berlin
 749e9ba6c73c,19662,Reutlingen,Berlin
 38271a58b81d,63621,Karlsruhe,Saarland
-835be6799755,50496,Mettmann,Hessen
+835be6799755,,Mettmann,Hessen
 46abfdacd226,21880,Sangerhausen,Brandenburg
 db101f406012,50583,Goslar,Niedersachsen
 f539e0e6728a,94757,Rottweil,Niedersachsen
@@ -937,7 +937,7 @@ f6a34b6ae058,52118,Sternberg,Nordrhein-Westfalen
 0d409b8b3b80,97814,Roding,Baden-Württemberg
 051822a99641,51588,Wunsiedel,Schleswig-Holstein
 270e3dbaa894,97425,Cottbus,Mecklenburg-Vorpommern
-a6a4c4bba062,61587,Konstanz,Sachsen
+a6a4c4bba062,,Konstanz,Sachsen
 880786415f0c,85615,Meppen,Mecklenburg-Vorpommern
 689be503fd22,69028,Nabburg,Thüringen
 83917dff0d2a,41610,Schwäbisch Gmünd,Schleswig-Holstein
@@ -972,7 +972,7 @@ d1c135e26a7a,12329,Berlin,Saarland
 c0aa67bccdba,62241,Ludwigslust,Schleswig-Holstein
 9f99f9396b9c,18489,Hannoversch Münden,Bremen
 4ec5d0d83271,64952,Grevenbroich,Hamburg
-bc4530a6f78d,30634,Husum,Nordrhein-Westfalen
+bc4530a6f78d,,Husum,Nordrhein-Westfalen
 c8264ff97bdf,10212,Heinsberg,Hessen
 e263a7a78454,21860,Flöha,Hamburg
 8c8ee8a9a9ef,71317,Rudolstadt,Schleswig-Holstein
@@ -999,3 +999,23 @@ e60bbfb74318,17294,Mallersdorf,Mecklenburg-Vorpommern
 ff5ac746bfa2,72728,Ebern,Brandenburg
 2ca50b35ad33,27284,Forst,Thüringen
 0ca72907330e,80192,Eckernförde,Hamburg
+49067f21850d,08320,Grimmen,Thüringen
+9ac16b47a843,72760,Eggenfelden,Bremen
+c4c7cda08897,06719,Holzminden,Nordrhein-Westfalen
+0a872da2b2c2,22593,Gunzenhausen,Bremen
+635719a9bacb,48463,Emmendingen,Bremen
+e70e2b8716ad,51826,Leipziger Land,Thüringen
+cd0279635bf1,21224,Zossen,Schleswig-Holstein
+a9617bd36564,19108,Rochlitz,Bremen
+c061d6ecb41c,97546,Vechta,Brandenburg
+54ff55540509,02255,Schwerin,Niedersachsen
+4778890e21f0,16272,Griesbach Rottal,Sachsen
+c9971add6108,92222,Lüdenscheid,Nordrhein-Westfalen
+c5dd3a786081,14257,Eckernförde,Schleswig-Holstein
+e4b5cb2247b3,18915,Torgau,Thüringen
+d7c8a8f805ce,13210,Darmstadt,Bayern
+180277d9bac3,91093,Vilsbiburg,Schleswig-Holstein
+a345a4ce9ea4,74545,Rehau,Thüringen
+1d535cf02561,53390,Kassel,Baden-Württemberg
+910f11049def,04337,Stadtroda,Bayern
+063985b5ff29,59208,Staffelstein,Niedersachsen
