@@ -1,81 +1,64 @@
-# Business Intelligence & Prozessanalyse: E-Commerce Lieferkette & Retouren
+# E-Commerce Logistics & Returns Analysis
 
-## 1. Ausgangssituation (Initial Situation)
+An end-to-end Business Intelligence project analyzing e-commerce logistics, delivery performance, product returns, and data quality using **Python, SQL, SQLite, and Power BI**.
 
-Ein mittelständisches deutsches E-Commerce-Unternehmen verzeichnet eine steigende Retourenquote und sinkende Kundenzufriedenheit. Es fehlt an Transparenz bezüglich der Ursachen von Lieferverzögerungen und Retouren in der Logistikkette.
+## Overview
 
-## 2. Zielsetzung (Project Goals)
+This project simulates a German e-commerce business and explores how delivery performance, logistics providers, and product categories relate to customer returns.
 
-- Aufbau eines reproduzierbaren Python-Pipelines für Ingestion, Datenqualitätsprüfung und Laden der Daten.
-- Datenschutzorientierte Verarbeitung: Personenbezogene Kundendaten (Name, E-Mail) werden im Ingestion-Schritt per SHA-256-Hashing pseudonymisiert, bevor sie das Analyse-System erreichen.
-- Relationales Star Schema, sowohl in SQLite (für SQL-Analysen) als auch in Power BI (für das Dashboard).
-- Nachvollziehbare Datenqualitätsprüfung mit dokumentierten, quarantänierten (nicht stillschweigend gelöschten) fehlerhaften Datensätzen.
-- Business-relevante SQL-Auswertungen zu Lieferverzögerungen, Retourenquote und Kosten.
+It covers the full data workflow, from synthetic data generation and validation to database design and SQL-based business analysis.
 
-## 3. Datenarchitektur
+**Note:** The dataset is synthetic and includes deliberately introduced data-quality issues and simulated business patterns. Findings should be interpreted within that context.
 
-- **Technologie-Stack:** Python (Pandas, Faker), SQLite, SQL, Power BI (DAX), Bash, Git.
-- **Datenschutz:** Personenbezogene Daten (PII wie Namen und E-Mails) werden direkt im Ingestion-Skript (`generate_data.py`) mittels SHA-256-Hashing pseudonymisiert, bevor Kundendaten weiterverarbeitet werden. Es handelt sich um eine technische Pseudonymisierungsmaßnahme, keine rechtliche DSGVO-Zertifizierung.
-- **Pipeline:** `generate_data.py` (Ingestion/Rohdaten) → `load_to_db.py` (Datenqualitätsprüfung + Laden nach SQLite) → `run_queries.py` (SQL-Auswertungen) → Power BI (Dashboard).
+## Workflow
 
-## 4. Datenmodell (Star Schema)
+1. **Data Generation** – Generate realistic synthetic e-commerce data using Python.
+2. **Data Quality** – Validate records, identify inconsistencies, and quarantine invalid data.
+3. **Database Design** – Organize validated data in a SQLite star schema.
+4. **SQL Analysis** – Investigate delivery performance, return rates, and logistics costs.
+5. **Visualization** – Prepare analytical data for an interactive Power BI dashboard.
 
-- **Fact_Orders:** Transaktionsdaten (Bestelldatum, Lieferdatum, Logistikdienstleister, Retourenstatus).
-- **Dim_Products:** Produktkategorien, Preise, Selbstkosten.
-- **Dim_Customers:** Pseudonymisierte Kundendaten (PLZ, Bundesland).
+## Key Findings
 
-Definiert in [`sql/schema.sql`](sql/schema.sql).
+- Hermes has a longer average delivery time (approximately 4.3 days) than DHL and DPD (approximately 2 days).
+- For deliveries delayed by at least five days, "Delivered too late" is the most frequent recorded return reason.
+- Clothing has the highest return rate, at approximately 39%.
 
-## 5. Datenqualität (Data Quality)
+*These patterns reflect the assumptions built into the synthetic dataset, not real-world company performance.*
 
-Die Rohdaten enthalten realistische, absichtlich eingebaute Fehler (siehe `generate_data.py`), um eine echte Validierung zu ermöglichen statt einer bereits perfekt sauberen Datenbasis:
+## Tech Stack
 
-- doppelte Kunden- und Bestelldatensätze (z. B. durch doppelten Import),
-- fehlende Postleitzahlen,
-- negative Versandkosten (Dateneingabefehler),
-- Lieferdatum vor Bestelldatum (logisch unmögliche Datensätze).
+Python · Pandas · Faker · SQL · SQLite · Power BI · DAX · Git
 
-`load_to_db.py` prüft jede dieser Regeln, **quarantäniert** betroffene Zeilen statt sie stillschweigend zu löschen (`reports/quarantined_customers.csv`, `reports/quarantined_orders.csv`) und schreibt einen zusammenfassenden Bericht nach [`reports/data_quality_report.md`](reports/data_quality_report.md). Nur geprüfte, saubere Daten werden in die SQLite-Datenbank geladen.
+## Project Structure
 
-## 6. SQL-Analysen
+```text
+├── generate_data.py
+├── load_to_db.py
+├── run_queries.py
+├── run_pipeline.sh
+├── requirements.txt
+├── sql/
+├── reports/
+├── Dim_Customers.csv
+├── Dim_Products.csv
+├── Fact_Orders.csv
+└── Lieferketten_Retouren_Analyse.pbix
+```
 
-[`sql/business_queries.sql`](sql/business_queries.sql) enthält die SQL-Abfragen, die die Kernerkenntnisse direkt aus der Datenbank ableiten (nicht nur aus Power BI). `run_queries.py` führt sie aus und schreibt die Ergebnisse nach [`reports/sql_findings.md`](reports/sql_findings.md).
-
-## 7. Kernerkenntnisse (Key Findings)
-
-1. **Logistik-Engpass:** Der Dienstleister Hermes weist mit durchschnittlich ~4,3 Tagen signifikant höhere Lieferzeiten auf als DHL oder DPD (~2 Tage).
-2. **Kausalität von Verzögerung & Retouren:** Bei Lieferungen mit ≥ 5 Tagen Verzögerung ist *"Zu spät geliefert"* mit Abstand der häufigste Retourengrund.
-3. **Fokuskategorie Bekleidung:** Die Retourenquote in der Kategorie *Bekleidung* liegt bei knapp 39 %, deutlich über allen anderen Kategorien.
-
-(Exakte Zahlen: siehe `reports/sql_findings.md`, reproduzierbar über die Pipeline.)
-
-## 8. Handlungsempfehlungen & Wirtschaftlicher Nutzen
-
-- **Kostenreduktion:** Neuverhandlung der SLAs mit Hermes oder Umverteilung des Versandvolumens zur Reduktion verspätungsbedingter Retouren.
-- **Prozessoptimierung:** Einführung präziserer Größentabellen im Shop zur Senkung der Retourenquote in der Kategorie Bekleidung.
-
-## 9. Reproduzierbarkeit
+## Run the Project
 
 ```bash
+git clone https://github.com/damchiaya-cyber/E-Commerce-Logistics-Analysis.git
+cd E-Commerce-Logistics-Analysis
 pip install -r requirements.txt
 bash run_pipeline.sh
 ```
 
-Das Skript generiert die Rohdaten, führt die Datenqualitätsprüfung durch, lädt die sauberen Daten nach `ecommerce.db` und schreibt beide Berichte nach `reports/`. Das bestehende Power-BI-Dashboard (`Lieferketten_Retouren_Analyse.pbix`) liest dieselben CSV-Dateien.
+Open `Lieferketten_Retouren_Analyse.pbix` with Power BI Desktop to explore the dashboard.
 
-## 10. Projektstruktur
+## Author
 
-```
-.
-├── generate_data.py           # Ingestion / Rohdaten-Generierung
-├── load_to_db.py               # Datenqualitätsprüfung + Laden nach SQLite
-├── run_queries.py               # Führt SQL-Analysen aus
-├── run_pipeline.sh              # Orchestriert die gesamte Pipeline
-├── sql/
-│   ├── schema.sql                # Star-Schema-Definition
-│   └── business_queries.sql      # Business-SQL-Abfragen
-├── reports/                    # Generierte Berichte (Data Quality, SQL Findings)
-├── Dim_Customers.csv / Dim_Products.csv / Fact_Orders.csv
-├── Lieferketten_Retouren_Analyse.pbix
-└── requirements.txt
-```
+**Aya Addamchi**
+
+*Building intelligent solutions for real-world decisions.*
