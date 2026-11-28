@@ -36,7 +36,6 @@ Python · Pandas · Faker · SQL · SQLite · Power BI · DAX · Git
 
 ## Project Structure
 
-## Project Structure
 
 ```text
 E-Commerce Logistics & Returns Process Analysis/
