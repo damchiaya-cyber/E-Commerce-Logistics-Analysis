@@ -2,6 +2,10 @@
 
 An end-to-end Business Intelligence project analyzing e-commerce logistics, delivery performance, product returns, and data quality using **Python, SQL, SQLite, and Power BI**.
 
+## Dashboard Preview
+
+![E-Commerce Logistics & Returns Dashboard](images/ecommerce_dashboard.png)
+
 ## Overview
 
 This project simulates a German e-commerce business and explores how delivery performance, logistics providers, and product categories relate to customer returns.
@@ -37,6 +41,8 @@ Python · Pandas · Faker · SQL · SQLite · Power BI · DAX · Git
 ```text
 E-Commerce Logistics & Returns Process Analysis/
 │
+├── images/
+│   └── ecommerce_dashboard.png
 ├── reports/
 │   ├── data_quality_report.md
 │   ├── quarantined_customers.csv
