@@ -32,18 +32,32 @@ Python · Pandas · Faker · SQL · SQLite · Power BI · DAX · Git
 
 ## Project Structure
 
+## Project Structure
+
 ```text
-├── generate_data.py
-├── load_to_db.py
-├── run_queries.py
-├── run_pipeline.sh
-├── requirements.txt
-├── sql/
+E-Commerce Logistics & Returns Process Analysis/
+│
 ├── reports/
+│   ├── data_quality_report.md
+│   ├── quarantined_customers.csv
+│   ├── quarantined_orders.csv
+│   ├── sql_findings.md
+│   └── Ecommerce_Logistics_Returns_Analysis.pbix
+│
+├── sql/
+│   ├── business_queries.sql
+│   └── schema.sql
+│
+├── .gitignore
 ├── Dim_Customers.csv
 ├── Dim_Products.csv
 ├── Fact_Orders.csv
-└── Lieferketten_Retouren_Analyse.pbix
+├── generate_data.py
+├── load_to_db.py
+├── run_pipeline.sh
+├── run_queries.py
+├── requirements.txt
+└── README.md
 ```
 
 ## Run the Project
@@ -55,7 +69,7 @@ pip install -r requirements.txt
 bash run_pipeline.sh
 ```
 
-Open `Lieferketten_Retouren_Analyse.pbix` with Power BI Desktop to explore the dashboard.
+Open `E-commerce_Logistics_Returns_Analysis.pbix` with Power BI Desktop to explore the dashboard.
 
 ## Author
 
